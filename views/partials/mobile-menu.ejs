@@ -1,0 +1,101 @@
+
+<!-- mobile nav  -->
+<div class="mobile-nav navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li class=" search-area">		
+          <%- include("./search-bar.ejs"); -%>
+        </li>
+        <li><a href="/profile/dashboard">Dashboard</a></li>
+        <li><a href="/repair">Latest Reports</a></li>
+        <li><a href="/repairform">Create Report</a></li>
+        <li><a href="/repair/searchpage">Search</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-center">
+    <a class="btn btn-ghost normal-case text-xl">Circuit Chaser</a>
+  </div>
+  <div class="navbar-end">
+    <!-- profile -->
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10  ">
+          <h1><%=user.username%></h1>
+        <img src="https://placeimg.com/80/80/people" />
+      </div>
+      </label>
+      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+      <li>                             
+        <a href="/profile" class="justify-between">
+        Profile
+        <span class="badge">New</span>
+        </a>
+      </li>
+      <li><a>Settings</a></li>
+      <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- mobile nav end -->
+
+
+
+
+
+
+
+
+  <!-- full nav -->
+  <div class="full-nav navbar bg-base-100">
+    
+    <div class="flex-1 ">
+      
+      <a class="logo btn btn-ghost normal-case text-xl">Circuit Chaser</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal p-0">
+        <li class=" search-area">		
+          <%- include("./search-bar.ejs"); -%>
+        </li>
+        <li><a href="/profile/dashboard">Dashboard</a></li>
+        <li><a href="/repair">Latest Reports</a></li>
+        <li><a href="/repairform">Create Report</a></li>
+        <li><a href="/repair/searchpage">Search</a></li>
+        <li><a href="/logout">Logout</a></li>
+
+       
+        <li tabindex="0">
+          <a>
+            <div class="w-10  ">
+              <h1><%=user.username%></h1>
+            <img src="https://placeimg.com/80/80/people" />
+          </div>
+          </a>
+          <ul class="submenu above p-2 bg-base-100">
+            <li>
+              <a href="/profile" class="justify-between">
+              Profile
+              <span class="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+    </div>
+    
+  </div>
+
+  
+
+
+  

@@ -1,0 +1,29 @@
+
+      
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const elems = document.querySelectorAll('.fixed-action-btn');
+            const instances = M.FloatingActionButton.init(elems, {
+            direction: 'up',
+            hoverEnabled: false
+        });
+    });
+    
+</script>
+<script>
+        //sidenav
+
+    M.Sidenav.init(document.querySelector('.sidenav'))
+    M.FormSelect.init(document.querySelector('#status'))
+
+</script>
+
+<script>
+    //text box 
+    CKEDITOR.replace('body',{
+        plugins: 'wysiwygarea, toolbar, basicstyles, link'
+    })
+</script>

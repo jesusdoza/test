@@ -1,0 +1,26 @@
+
+
+
+/* SIZING */
+
+.dropdown-content{
+    z-index: 30;
+    background-color: white;
+    
+}
+
+/* media querys */
+
+@media(min-width:300px) {
+    .navbar{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media(min-width:800px) {
+    .navbar{
+        flex-wrap:wrap;
+        width: 100%;
+    }
+}

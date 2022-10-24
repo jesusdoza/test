@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("./partials/head"); -%>
+
+</head>
+<body class=" ">
+    <header>
+        <nav>
+           
+            <%- include("./partials/mobile-menu"); -%>
+       
+        </nav>
+    </header>
+        <!-- loading screen -->
+        <section class=" hidden status-icons">
+            <div id="loading" class="loading-text">Loading</div>
+            <progress class="progress progress-info w-56" value="10" max="100"></progress>
+        </section>
+		<main class="card">
+       
+
+            <!-- on change of form state mostly from image upload preview the image -->
+            <form id="repair-form" class="small-padding repair-form" action="#" encType="multipart/form-data" >
+                <legend class=" form-desc flex-center">
+
+                    <div class="  form-control  max-w-xs">
+                        <label class="label">
+                          <span class="label-text">Title: </span>
+                        </label>
+                        <input id="title" name="title" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" required />
+                        <label class="label">
+                        </label>
+                    </div>
+                    <div class="form-control  max-w-xs">
+                        <label class="label">
+                          <span class="label-text">Search Tags: </span>
+                        </label>
+                        <input id="search-tags" name="search-tags" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <label class="label">
+                        </label>
+                    </div>
+                    <div class="form-control  max-w-xs">
+                        <label class="label">
+                          <span class="label-text">Board type: </span>
+                        </label>
+                        <input id="board-type"  name="boardtype" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <label class="label">
+                        </label>
+                    </div>
+                </legend>
+               
+
+                <!-- pick model of engine -->
+                    <section class="container blue-grey darken-1">
+
+                        <fieldset class="border engine-models">
+                            <legend>Choose Engine</legend>
+                            <span>
+                                <label for="cat">
+                                    <div class="badge badge-accent">
+                                        <input id="cat" name="model" value="cat" type="radio" class=" model radio" />
+                                        Caterpillar
+
+                                    </div>
+                                </label>
+                            </span>
+                            <span>
+                                <label for="detroit">
+                                    <div class="badge badge-accent">
+                                        <input id="detroit" name="model" value="detroit" type="radio" class=" model radio" />
+                                        <!-- <input class="model" id="detroit" name="model" value="detroit" type="radio"> -->
+                                        Detroit
+
+                                    </div>
+                                </label>
+                              </span>
+
+                              <span>
+                                <label for="cummins">
+                                    <div class="badge badge-accent">
+                                        <input id="cummins" name="model" value="cummins"  type="radio" class=" model radio" />
+                                        <span>Cummins</span>
+                                    </div>
+                                </label>
+                              </span>
+
+                              <span>
+                                <label for="other">
+                                    <div class="badge badge-accent">
+                                        <input id="other" checked name="model" value="other"  type="radio" class=" model radio" />
+                                        <span>Other</span>
+                                    </div>
+                                </label>
+                              </span>
+                        </fieldset>
+                    </section>
+                     
+                    
+                   <section class=" border  " >
+
+                       <ol id="instructions" data-currentProcId="1">
+                        
+                           
+                           <!-- repair instructions -->
+                           <li class=" procedure small-padding card  bg-base-100 shadow-xl" data-procedureId="1">
+                              
+                                   <section class="grey procedure--details small-padding">
+                                       <h3>Repair Procedure</h3>
+                           
+                                       
+                                       <!-- images uploaded -->
+                                       <fieldset class=" procedure--images-list ">
+                                           <legend>Images
+                                               <!-- add another image button -->
+                                               
+                                           </legend>
+       
+                                            <ol class="uploads" data-totalfiles="0" data-uploadId="0">
+                                               <!-- <li class="imageuploaded small-padding ">
+                                                   <img src="" alt="repair image" class="img-mini">
+                                                   <input  data-uploadnum="1" type="file" name="picture1" accept="image/*" onchange="previewImage(event)"  >
+                                                   <span class="button--mobile rounded clickable">remove item</span>
+                                               </li> -->
+                                           
+                                            </ol>
+                                            <div class="btn bg-warning text-black " data-action="add-image">
+                                                add another image
+                                            </div>
+                                       
+                                       </fieldset>
+                                       <!-- <fieldset class=""> -->
+                                           <legend class="" >Instructions</legend>
+                                           <textarea id="instructions1" class="textarea textarea-warning instructions center-block large-input white" 
+                                                placeholder="Instructions"
+                                                name="instructions1"
+                                                value=""
+                                                rows="8"></textarea>
+                                          
+                                   </section>
+                                  <section class="controls">
+                                    <div class="bg-accent text-base-200 btn add-proc" data-action="add-procedure">
+                                        add another step
+                                    </div>
+                                    
+                                    <details class="warning">
+                                        <summary class=" btn text-black bg-warning remove-proc"> Delete Procedure</summary>
+                                        <div class=" btn bg-error-content text-white" data-action="remove-procedure">confirm delete</div>
+                                    </details>
+                                  </section> 
+                           </li>
+                       </ol>
+                   </section>
+                <button id="submit" class="btn" type="submit">
+                   submit
+                </button>
+
+            </form>
+           
+
+           
+        </main>
+
+        <footer>			
+			
+		</footer>
+        <script type="text/javascript" src="./js/repairformclient.js"></script>
+        <%- include("./partials/scripts"); -%>
+        
+</body>
+</html>

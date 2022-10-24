@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		
+        <%- include("./partials/head.ejs"); -%>
+	</head>
+	<body class="search-page center-block">
+		<header>
+			<nav>
+				<%- include("./partials/mobile-menu.ejs"); -%>
+				
+			</nav>
+			
+		</header>
+	
+		<section class=" row small-padding  grey">  
+            <h1 class="text-xl">
+                Title: 
+                <span class="badge badge-lg"><%= repair.title %></span>
+            </h1>
+            <section class="grey"> 
+                <section class="card small-padding">
+                    <h2 class="text-xl">
+                        Repair group: 
+                        <span class="badge badge-lg"><%= repair.group ? repair.group : 'public' %></span>
+                    </h2>
+                    <h2 class="text-xl">
+                        Repair ID:  
+                        <span class="badge badge-lg"><%= repair._id %></span>
+                    </h2>
+                    <h2 class="text-xl">
+                        Repair Documented by: 
+                        <span class="badge badge-lg"><%= repair.createdBy ? repair.createdBy : 'public' %></span>
+                    </h2>
+                    
+                </section>
+    
+                <section class="rounded">
+                    <span class="title  board-type">Board Type: </span> 
+                    <h3 class="chip"><%= repair.boardType %></h3> 
+                    
+                </section>
+                
+                <section class="  rounded repair-info">
+                    <span class="title  ">Engine Make: </span>
+                    <h3 class="chip"><%= repair.engineMake %></h3>
+                </section>
+                
+            </section> 
+                
+            <!-- procedures -->
+            <ol class="procedure-list" data-currentProcId="1">   
+                
+                <% for (let i= 0 ; repair.procedureArr.length > i ; i++){ %>
+
+                    <li class=" card procedure-item small-padding">
+                       
+                        <section class="pic-container center-block">
+                            <!-- images list -->
+                            <!-- carousel -->
+                            <div class="carousel ">
+                                <% for (let a= 0 ; repair.procedureArr[i].images.length > a ; a++){ %>
+                                    <div id="item<%=a%><%=i%>" class="carousel-item w-full ">
+                                        <a class="w-full" href="<%= repair.procedureArr[i].images[a] %>">
+                                            <!-- update below -->
+                                        <%if (repair.procedureArr[i].images){%>
+                                            <img loading="lazy" src="<%= repair.procedureArr[i].images[a].replace('/upload/','/upload/c_scale,w_600/')%>">
+                                        <%}%>
+                                        <span>Click to see full image</span>
+                                        </a>
+                                    </div>
+
+                                <% } %>
+                            </div>
+
+                            <!-- bottom carousel numbers -->
+                            <div class="flex justify-center w-full py-2 gap-2">
+                                <% for (let a= 0 ; repair.procedureArr[i].images.length > a ; a++){ %>
+                                    <a href="#item<%=a%><%=i%>" class="btn btn-xs"><%= a+1 %></a> 
+                                <% } %>
+                            </div>
+                            <!-- description -->
+                            <section class="small-padding">
+                               <p class="center-text instructions">
+                                   <%= repair.procedureArr[i].instructions %>
+                               </p> 
+                           </section>
+                            <!-- carousel end-->
+
+                        </section>
+                    </li>
+                <% } %>
+            </ol>
+        </section>
+
+        <footer>	
+            <div>
+                <!-- if username === createdby || user.role === admin -->
+                <form action='/repair/delete/<%= repair._id %>'>
+                    <details>
+                        <summary class="btn"> Delete Report</summary>
+                        <button class="btn red">confirm delete</button>
+                        
+                    </details>
+                   
+                   </form>
+            </div>		
+			
+		</footer>
+     
+
+       
+</body>
+</html>
+
+
+
+

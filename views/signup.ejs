@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Signup</title>
+</head>
+<body class="">
+
+
+    <div class="container login-container">
+        <div class="card  light-blue lighten-5">
+            <div class="card-content">
+                <h1>Sign up for a new account: </h1><span>or<a href="/login" class="btn green">login</a></span>
+                
+            
+                    <form action="/signup" method="POST">
+                
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username">
+                
+                        </div>
+                
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" >
+                
+                        </div>
+                
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" >
+                
+                        </div>
+                
+                        <div class="input-field">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input id="confirmPassword" type="password" name="confirmPassword">
+                
+                        </div>
+                        <input class="btn" type="submit">
+                
+                    </form>
+             
+
+            </div>
+        </div>
+
+    </div>
+    <%- include("./partials/scripts"); -%>
+</body>
+</html>

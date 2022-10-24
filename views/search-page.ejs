@@ -1,0 +1,43 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("./partials/head"); -%>
+	</head>
+	<body class="search-page  blue-grey darken-4">
+		<!-- search bar -->
+		<header>
+			
+			<nav>
+
+				<%- include("./partials/mobile-menu"); -%>
+			</nav>
+			<section class="">
+				<form action="/repair/search" method="get">
+					<div class="input-field">
+						<label for="search">Search for Fault code / issue</label>
+						<input id="search" class="search_input" type="text" name="searchPhrase">
+						<!-- <input type="text" id="title" name="title"> -->
+					</div>
+					<button class=" btn" type="submit">Search</button>
+				</form>
+			</section>
+			
+		</header>
+		
+		<main class="">
+			<!-- results -->
+		<section class=" results small-padding entry-list" >
+		</section>
+
+		</main>
+		<footer>
+			<!--menu button  -->
+		</footer>
+	
+		<%- include("./partials/scripts"); -%>
+	</body>
+</html>

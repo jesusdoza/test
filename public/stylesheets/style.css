@@ -1,0 +1,193 @@
+h1{
+    font-size: 3rem;
+
+}
+
+h2{
+    font-size: 2rem;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: #21b2a6;
+    
+}
+nav ul li{
+    float: right;
+     
+}
+a , a:hover{
+    text-decoration: none;
+}
+
+body *{
+    color: black;
+}
+legend{
+    font-size: 1.5rem;
+}
+.entry{
+  min-height: 300px;
+  overflow: hidden;
+  width: 80%;
+}
+
+.med-titlebox{
+    height: 10%;
+}
+
+
+
+.entry_brief{
+    /* font-size: 2rem; */
+    /* overflow: hidden; */
+    height: 100%;
+}
+
+.card-stacked{
+    overflow: hidden;
+}
+
+.img-mini{
+    max-width: 40%;
+    max-height: 300px;
+}
+
+/*=============================== 
+STYLES
+================================ */
+.chip{
+    background-color: white;
+    display: inline-block;
+    height: inherit;
+    
+}
+.wrapper{
+}
+.center-block{
+    margin: 0 auto;
+}
+.large-input{
+    width: 80%;
+    height: auto;
+}
+
+.ellipsis{
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+
+.border{
+    border: 3px green solid;
+}
+.small-padding{
+    padding: 3%;
+}
+
+.rounded{
+    border-radius: 50px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.horz-flex{
+    display: flex;
+    /* flex-basis: 1; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-item{
+    min-width: 30%;
+    /* border: rgb(128, 0, 0) 9px solid; */
+    
+}
+.image-preview{
+    /* border: green 9px solid; */
+    width: 100%;
+}
+
+.entry-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.small-padding{
+    padding: 3%;
+}
+
+
+/*===================================== 
+TYPOGRAPHY
+==================================== */
+
+.instructions{
+    white-space: pre-line;
+    text-align: left;
+}
+.title{
+    font-size: 1.5rem;
+}
+
+.entry-brief{
+    font-size: 1.2rem;
+    overflow: hidden;
+    
+}
+.overflow{
+    white-space:no-wrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/*====================================== 
+media queries
+======================================== */
+
+@media screen and (min-width: 320px) {
+    nav .brand-logo{
+         font-size:1.3rem ;
+     }
+ }
+ @media screen and (min-width: 425px) {
+     nav .brand-logo{
+          font-size:1.5rem ;
+      }
+  }
+ 
+  @media screen and (min-width: 760px) {
+     nav .brand-logo{
+          font-size:1.7rem ;
+      }
+  }
+ 
+
+
+
+@media screen and (min-width: 1023px) {
+    .entry-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items:center;
+      justify-content: space-evenly;
+    }
+    .entry{
+        width: 50%;
+    }
+  }

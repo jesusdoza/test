@@ -1,0 +1,300 @@
+
+
+body{
+    width: 100%;
+}
+nav{
+    width: 100%;
+   
+}
+
+li.fill.search-area{
+    width: 100%;
+}
+li.fill{
+    width: 100%;
+}
+.entry{
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+
+  margin:50px 0;
+  padding: 10px;
+
+}
+
+
+.hidden{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.entry_brief{
+    height: 100%;
+}
+.submenu{
+    z-index: 30;
+}
+
+figure img{
+
+    width: 100%;
+}
+
+
+.card{
+    height: 100%;
+    width: 100%;
+}
+
+
+.mobile-menu > li{
+    width: 50%;
+}
+
+
+.procedure-item{
+    /* height: 300px; */
+}
+
+.pic-container{
+    width: 100%;
+    
+}
+
+.large-input{
+    width: 80%;
+    height: auto;
+}
+
+.mobile-menu{
+    width: 100%;
+}
+
+.image-item{
+    min-width: 30%;
+}
+.image-preview{
+    /* border: green 9px solid; */
+    width: 100%;
+}
+
+
+.status-icons{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 40;
+
+}
+/*=============================== 
+STYLES
+================================ */
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.warning .btn:hover{
+    background-color: rgb(210, 27, 27);
+}
+.btn:hover{
+    background-color: chartreuse;
+}
+.status-icons{
+    background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#instructions{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.center-block{
+    margin: 0 auto;
+}
+
+#mobile-nav{
+    justify-content:space-evenly;
+    flex-direction: row-reverse;
+}
+.mobile-menu{
+    flex-wrap: wrap;
+}
+
+
+.ellipsis{
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+
+.border{
+    border: 3px rgb(51, 56, 51) solid;
+}
+.small-padding{
+    padding: 3%;
+}
+
+.rounded{
+    border-radius: 50px;
+}
+
+.center-text{
+    text-align: center;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.horz-flex{
+    display: flex;
+    /* flex-basis: 1; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.entry-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.small-padding{
+    padding: 3%;
+}
+
+
+/*===================================== 
+TYPOGRAPHY
+==================================== */
+
+.instructions-list{
+    white-space: pre-line;
+    text-align: left;
+    text-overflow: clip;
+    height: 50%;
+    width: 100%;
+}
+.title{
+    font-size: 1.5rem;
+}
+
+.entry-brief{
+    font-size: 1.2rem;
+    overflow: hidden;
+    
+}
+.overflow{
+    white-space:no-wrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/*====================================== 
+media queries
+======================================== */
+
+@media screen and (min-width: 310px) {
+  
+    .form-desc{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .textarea{
+        width: 50%;
+    }
+    .engine-models{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-control{
+        justify-content: center;
+        
+    }
+    .full-nav{
+        display: none;
+    }
+    
+    .instructions{
+        font-size: 1.2rem;
+        width: 100%;
+        color: rgb(237, 223, 223);
+    }
+
+    .search-area{
+        width: 0;
+        height: 0;
+        visibility:hidden;
+    }
+  
+  }
+  @media  (min-width: 600px) {
+    .form-desc{
+        flex-direction: row;
+    }
+  
+  }
+    
+
+  @media  (min-width: 760px) {
+    /* remove mobile nave */
+    .mobile-nav{
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    .full-nav{
+        display:block;
+    }
+
+
+
+
+    .entry-list{
+        width: 100%;
+    }
+    .entry{
+        width: 50%;
+    }
+   
+  }
+  
+@media  (min-width: 1023px) {
+    .search-area{
+        visibility: visible;
+        width: fit-content;
+        height: 100%;
+    }
+    .entry-list{
+        width: 100%;
+    }
+    .entry{
+        width: 50%;
+    }
+   
+  }

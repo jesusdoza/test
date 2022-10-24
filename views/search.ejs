@@ -1,0 +1,38 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("./partials/head"); -%>
+	</head>
+	<body class="search-page  blue-grey darken-4">
+		<!-- search bar -->
+		<header>
+			
+			<nav>
+
+				<%- include("./partials/mobile-menu"); -%>
+			</nav>
+			
+		</header>
+		
+		<main class="">
+			<!-- results -->
+		<section class=" results small-padding entry-list" >
+
+			<% for(let i =0; i<repairs.length; i++){ %>
+				<%- include("./partials/repairs-list"); -%>
+			
+            <%}%> -->
+		</section>
+
+		</main>
+		<footer>
+			<!--menu button  -->
+		</footer>
+	
+		<%- include("./partials/scripts"); -%>
+	</body>
+</html>
